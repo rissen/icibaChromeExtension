@@ -1,0 +1,21 @@
+#icibaBoxBg {
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:9999;
+}
+#icibaResultList{
+	font-size: 12px;
+	margin:0;
+	padding:0;
+	text-align: left;
+	color: #000000;
+} 
+#icibaResultList li{
+	line-height: 22px;
+	list-style: none;
+	margin:0;
+	padding:0;
+} 
