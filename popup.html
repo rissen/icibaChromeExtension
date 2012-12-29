@@ -1,28 +1,44 @@
 <!doctype html>
 <html>
-  <head>
-	<meta charset="UTF-8">
-    <title>iciba Dictionary</title>
-    <style>
-	    body {
-        min-width:357px;
-        overflow-x:hidden;
-		font-size: 12px;
-      }
-    </style>
+<head>
+<meta charset="UTF-8">
+<title>iciba Dictionary</title>
+<style>
+body {
+	min-width: 300px;
+	overflow-x: hidden;
+	font-size: 12px;
+}
 
-    <script src="popup.js"></script>
-  </head>
-  <body>
-	<div>
-		<input name="word" id="searchInput" type="text"></input>
-		<input type="submit" value="Search" id="searchButton" ></input>
-	</div>
-	<div id="content">
-		<ol id="resultList">
-			
-		</ol>
-	</div>
+a {
+	text-decoration: none;
+	color: #333333;
+}
 
-  </body>
+li {
+	line-height: 18px;
+}
+
+#footer {
+	border-top: 1px solid #EEEEEE;
+	margin: 10px 0 0 0;
+	padding: 10px 0 0 0;
+	text-align: right;
+}
+</style>
+
+<script src="popup.js"></script>
+</head>
+<body>
+<div><input name="word" id="searchInput" type="text"></input> <input
+	type="submit" value="Search" id="searchButton"></input></div>
+
+<div id="content">
+<ol id="resultList">
+</ol>
+</div>
+
+<div id="footer"><a target="_blank" href="http://weibo.com/rissen">@乔巴巴胡</a>
+</div>
+</body>
 </html>

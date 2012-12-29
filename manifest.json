@@ -1,31 +1,30 @@
 {
-  "name": "iciba Dictionary",
-  "version": "1.0",
-  "manifest_version": 2,
-  "description": "金山词霸，爱词霸划词翻译.",
-  "icons": {
-    "16": "images/icon16.png",
-    "48": "images/icon48.png",
-    "128": "images/icon128.png"
-  },
-  "permissions": [
-    "tabs", "http://*/*", "https://*/*"
-  ],
-  "browser_action": {
-      "default_title": "iciba Dictionary",
-      "default_icon": "icon.png",
-      "default_popup": "popup.html"
-  },
-  "content_scripts": [{
-    "matches": ["http://*/*", "https://*/*"],
-    "js": ["content.js"],
-	"run_at": "document_end"
-  }],
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": false
-  },
-  "web_accessible_resources": [
-    "iciba_style.css"
-  ]
+	"name": "iciba Dictionary",
+	"version": "2012.12.28.0",
+	"manifest_version": 2,
+	"description": "金山词霸，爱词霸划词翻译. @乔巴巴胡",
+	"icons": {
+		"16": "images/icon16.png",
+		"48": "images/icon48.png",
+		"128": "images/icon128.png"
+	},
+	"permissions": ["tabs", "http://*/*", "https://*/*"],
+	"browser_action": {
+		"default_title": "iciba Dictionary",
+		"default_icon": "icon.png",
+		"default_popup": "popup.html"
+	},
+	"content_scripts": [{
+		"matches": ["http://*/*", "https://*/*"],
+		"js": ["content.js"],
+		"run_at": "document_start"
+	}],
+	
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	},
+	"web_accessible_resources": [
+		"iciba_style.css"
+	]
 }

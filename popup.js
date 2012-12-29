@@ -5,8 +5,7 @@ function search() {
 	var word = document.getElementById("searchInput").value.toLowerCase();
 	var resultList = document.getElementById('resultList');
 	resultList.innerHTML = "正在查询...";
-	req.open("GET", icibaAPIBaseURL + word,
-			true);
+	req.open("GET", icibaAPIBaseURL + word, true);
 	req.onload = showProns;
 	req.send(null);
 }
@@ -56,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			if (response.method == "getSelectedText") {
 				var selectedText = response.data;
 				// TO-DO text validation
-				if(selectedText.length != 0){
+				if (selectedText.length != 0) {
 					searchInput.value = selectedText;
 					var event = document.createEvent("HTMLEvents");
 					event.initEvent('click', true, true);
