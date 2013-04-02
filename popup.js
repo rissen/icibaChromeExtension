@@ -17,7 +17,7 @@ function showProns() {
 	if (prons.length == 0) {
 		innerHTMLText = "无匹配的翻译."
 	} else {
-		for ( var i = 0, pron; pron = prons[i]; i++) {
+		for (var i = 0, pron; pron = prons[i]; i++) {
 			var wordType = pron.textContent;
 			var acceptation = pron.nextSibling;
 			while (acceptation.nodeType != 1) {
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	// translate the seletced word
 	chrome.tabs.getSelected(null, function(tab) {
 		chrome.tabs.sendRequest(tab.id, {
-			method : "getSelectedText"
+			method: "getSelectedText"
 		}, function(response) {
 			if (response.method == "getSelectedText") {
 				var selectedText = response.data;
